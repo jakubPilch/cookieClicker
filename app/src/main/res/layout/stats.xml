@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Stats">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3F51B5"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <TextView
+            android:id="@+id/textViewStats"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:text="Stats"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            tools:text="Stats"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewTotalScore"
+                android:layout_width="401dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Total score:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewCookiesSpent"
+                android:layout_width="401dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:text="Cookies spent:"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttonSaveToDatabase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save stats to Database"
+                android:backgroundTint="#635a50"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonStatsMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Menu"
+                    android:backgroundTint="#635a50"/>
+
+                <Button
+                    android:id="@+id/buttonStatsPlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Play"
+                    android:backgroundTint="#635a50"/>
+
+                <Button
+                    android:id="@+id/buttonStatsShop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Shop"
+                    android:backgroundTint="#635a50"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart"
+                android:layout_width="match_parent"
+                android:layout_height="455dp"
+                android:layout_above="@+id/seekBar1" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

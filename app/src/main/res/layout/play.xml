@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3F51B5"
+    tools:context=".Play">
+
+    <LinearLayout
+        android:layout_width="408dp"
+        android:layout_height="647dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="82dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="#3F51B5"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            tools:text="Score"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/textViewPerSec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" per second"
+            android:layout_gravity="center"/>
+
+        <ImageButton
+            android:id="@+id/imageButtonCookie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="?android:selectableItemBackground"
+            android:onClick="buttonKlik"
+            app:srcCompat="@drawable/cookietoclick" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonPlayMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Menu"
+                android:backgroundTint="#635a50"/>
+
+            <Button
+                android:id="@+id/buttonPlayStats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Stats"
+                android:backgroundTint="#635a50"/>
+
+            <Button
+                android:id="@+id/buttonPlayShop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Shop"
+                android:backgroundTint="#635a50"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
